@@ -1,0 +1,21 @@
+{
+  "name": "photo-studio-web-app",
+  "description": "Photo Studio Management Web App",
+  "main": "index.html",
+  "authors": [
+    "quinntynebrown@gmail.com"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/QuinntyneBrown/PhotoStudio",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-tinymce": "^0.0.14"
+  }
+}

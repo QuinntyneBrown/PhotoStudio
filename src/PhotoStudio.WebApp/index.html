@@ -2,9 +2,30 @@
 <html>
 <head>
     <title>Photo Studio: Web App</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="user-scalable=no,
+              initial-scale=1,
+              maximum-scale=1,
+              minimum-scale=1,
+              width=device-width,
+              height=device-height,
+              target-densitydpi=device-dpi" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" />
 </head>
-<body>
+<body data-ng-app="app">
 
+    <app data-ng-if="!isAdmin"></app>
+    <admin-app data-ng-if="isAdmin"></admin-app>
+
+    <script type="text/javascript" src="bower_components/tinymce-dist/tinymce.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-sanitize.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+    <script src="lib/clipboard.min.js"></script>
+    <script src="dist/app.js"></script>
 </body>
 </html>

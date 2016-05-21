@@ -72,16 +72,47 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\reset.css" />
+    <Content Include="gulpfile.js" />
     <Content Include="index.html" />
+    <Content Include="lib\angular-route.js" />
+    <Content Include="lib\angular-sanitize.js" />
+    <Content Include="lib\angular.js" />
+    <Content Include="lib\clipboard.min.js" />
+    <Content Include="lib\jquery.js" />
+    <Content Include="lib\rx.all.compat.min.js" />
     <Content Include="packages.config" />
+    <Content Include="package.json" />
+    <Content Include="wwwroot\app\app.component.css" />
+    <Content Include="wwwroot\app\app.component.html" />
+    <Content Include="wwwroot\app\header.component.css" />
+    <Content Include="wwwroot\app\header.component.html" />
+    <Content Include="wwwroot\core\core.css" />
+    <Content Include="wwwroot\modal\modal-content.component.css">
+      <DependentUpon>modal-content.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\modal\modal-content.component.html">
+      <DependentUpon>modal-content.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\modal\modal-title.component.css">
+      <DependentUpon>modal-title.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\modal\modal-title.component.html">
+      <DependentUpon>modal-title.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\modal\modal.component.css">
+      <DependentUpon>modal.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\modal\modal.component.html">
+      <DependentUpon>modal.component.ts</DependentUpon>
+    </Content>
+    <Content Include="bower.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Compile Include="wwwroot\customer\customer-paged-list.component.css" />
-    <Compile Include="wwwroot\customer\customer-paged-list.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -90,17 +121,94 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="libs\" />
+    <Folder Include="dist\" />
     <Folder Include="wwwroot\admin\" />
-    <Folder Include="wwwroot\app\" />
-    <Folder Include="wwwroot\core\" />
+    <Folder Include="wwwroot\customer\" />
     <Folder Include="wwwroot\gallery\" />
     <Folder Include="wwwroot\photo\" />
+    <Folder Include="wwwroot\rate-calculator\" />
     <Folder Include="wwwroot\user\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="typings\angularjs\angular-route.d.ts" />
+    <TypeScriptCompile Include="typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="typings\requirejs\require.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="wwwroot\app\app.actions.ts" />
+    <TypeScriptCompile Include="wwwroot\app\app.component.ts" />
+    <TypeScriptCompile Include="wwwroot\app\app.module.ts" />
+    <TypeScriptCompile Include="wwwroot\app\app.reducers.ts" />
+    <TypeScriptCompile Include="wwwroot\app\app.service.ts" />
+    <TypeScriptCompile Include="wwwroot\app\header.component.ts" />
+    <TypeScriptCompile Include="wwwroot\app\index.ts" />
+    <TypeScriptCompile Include="wwwroot\core\%24q.ts" />
+    <TypeScriptCompile Include="wwwroot\core\action-creator.ts" />
+    <TypeScriptCompile Include="wwwroot\core\add-or-update.ts" />
+    <TypeScriptCompile Include="wwwroot\core\animation-control.ts" />
+    <TypeScriptCompile Include="wwwroot\core\api-endpoint-provider.ts" />
+    <TypeScriptCompile Include="wwwroot\core\append-to-body-async.ts" />
+    <TypeScriptCompile Include="wwwroot\core\auth-interceptor.ts" />
+    <TypeScriptCompile Include="wwwroot\core\change-detection-strategy.ts" />
+    <TypeScriptCompile Include="wwwroot\core\component-decorators.ts" />
+    <TypeScriptCompile Include="wwwroot\core\component-extension.ts" />
+    <TypeScriptCompile Include="wwwroot\core\content-child.ts" />
+    <TypeScriptCompile Include="wwwroot\core\content-children.ts" />
+    <TypeScriptCompile Include="wwwroot\core\core.module.ts" />
+    <TypeScriptCompile Include="wwwroot\core\debounce.ts" />
+    <TypeScriptCompile Include="wwwroot\core\directive.ts" />
+    <TypeScriptCompile Include="wwwroot\core\extend-css-async.ts" />
+    <TypeScriptCompile Include="wwwroot\core\fetch.ts" />
+    <TypeScriptCompile Include="wwwroot\core\form-encode.ts" />
+    <TypeScriptCompile Include="wwwroot\core\get-dom.ts" />
+    <TypeScriptCompile Include="wwwroot\core\get-from-url-sync.ts" />
+    <TypeScriptCompile Include="wwwroot\core\get-x.ts" />
+    <TypeScriptCompile Include="wwwroot\core\get-y.ts" />
+    <TypeScriptCompile Include="wwwroot\core\host-binding.ts" />
+    <TypeScriptCompile Include="wwwroot\core\host-listener.ts" />
+    <TypeScriptCompile Include="wwwroot\core\http.ts" />
+    <TypeScriptCompile Include="wwwroot\core\index.ts" />
+    <TypeScriptCompile Include="wwwroot\core\inject.ts" />
+    <TypeScriptCompile Include="wwwroot\core\injectable.ts" />
+    <TypeScriptCompile Include="wwwroot\core\input.ts" />
+    <TypeScriptCompile Include="wwwroot\core\invoke-async.ts" />
+    <TypeScriptCompile Include="wwwroot\core\is-present.ts" />
+    <TypeScriptCompile Include="wwwroot\core\local-storage-manager-provider.ts" />
+    <TypeScriptCompile Include="wwwroot\core\login-redirect-provider.ts" />
+    <TypeScriptCompile Include="wwwroot\core\output.ts" />
+    <TypeScriptCompile Include="wwwroot\core\pipe-transform.ts" />
+    <TypeScriptCompile Include="wwwroot\core\pipe.ts" />
+    <TypeScriptCompile Include="wwwroot\core\pluck-out.ts" />
+    <TypeScriptCompile Include="wwwroot\core\pluck.ts" />
+    <TypeScriptCompile Include="wwwroot\core\provide-route-promise.ts" />
+    <TypeScriptCompile Include="wwwroot\core\provide.ts" />
+    <TypeScriptCompile Include="wwwroot\core\remove-element.ts" />
+    <TypeScriptCompile Include="wwwroot\core\renderer.ts" />
+    <TypeScriptCompile Include="wwwroot\core\route-resolver.ts" />
+    <TypeScriptCompile Include="wwwroot\core\route-when-extension.ts" />
+    <TypeScriptCompile Include="wwwroot\core\safe-digest.ts" />
+    <TypeScriptCompile Include="wwwroot\core\service-decorator.ts" />
+    <TypeScriptCompile Include="wwwroot\core\service.ts" />
+    <TypeScriptCompile Include="wwwroot\core\set-opacity-async.ts" />
+    <TypeScriptCompile Include="wwwroot\core\static-response.ts" />
+    <TypeScriptCompile Include="wwwroot\core\store.ts" />
+    <TypeScriptCompile Include="wwwroot\core\transform-y.ts" />
+    <TypeScriptCompile Include="wwwroot\core\translate-x-async.ts" />
+    <TypeScriptCompile Include="wwwroot\core\translate-x.ts" />
+    <TypeScriptCompile Include="wwwroot\core\tree-node.ts" />
+    <TypeScriptCompile Include="wwwroot\core\tree.ts" />
+    <TypeScriptCompile Include="wwwroot\core\view-child.ts" />
+    <TypeScriptCompile Include="wwwroot\core\view-children.ts" />
+    <TypeScriptCompile Include="wwwroot\core\view-encapsulation.ts" />
+    <TypeScriptCompile Include="wwwroot\core\xhr-backend.ts" />
     <TypeScriptCompile Include="wwwroot\main.ts" />
-    <Compile Include="wwwroot\customer\customer-paged-list.component.ts" />
+    <TypeScriptCompile Include="wwwroot\modal\modal-content.component.ts" />
+    <TypeScriptCompile Include="wwwroot\modal\modal-title.component.ts" />
+    <TypeScriptCompile Include="wwwroot\modal\modal.actions.ts" />
+    <TypeScriptCompile Include="wwwroot\modal\modal.component.ts" />
+    <TypeScriptCompile Include="wwwroot\modal\modal.module.ts" />
+    <TypeScriptCompile Include="wwwroot\modal\modal.reducers.ts" />
+    <TypeScriptCompile Include="wwwroot\modal\modal.service.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
